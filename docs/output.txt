@@ -1,0 +1,369 @@
+Python 3.7.2 (v3.7.2:9a3ffc0492, Dec 24 2018, 02:44:43) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+=== RESTART: /Users/parthmerchant/Desktop/deterministic-finite-automaton/dfa.py ===
+Do you want to enter a string: y
+Enter a string: foo@njit.com
+f q1
+o q1
+o q1
+@ q2
+n q3
+j q3
+i q3
+t q3
+. q4
+c q5
+o q6
+m q7
+STRING ACCEPTED
+Do you want to enter a string: y
+Enter a string: z@c.com
+z q1
+@ q2
+c q3
+. q4
+c q5
+o q6
+m q7
+STRING ACCEPTED
+Do you want to enter a string: y
+Enter a string: ba@ba.co
+b q1
+a q1
+@ q2
+b q3
+a q3
+. q4
+c q5
+o q6
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: cdef@.com
+c q1
+d q1
+e q1
+f q1
+@ q2
+. q8 TRAP STATE
+c q3
+o q3
+m q3
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: webweb.a.b.c.d.e@z.ai.cs.stanford.com
+w q1
+e q1
+b q1
+w q1
+e q1
+b q1
+. q0
+a q1
+. q0
+b q1
+. q0
+c q1
+. q0
+d q1
+. q0
+e q1
+@ q2
+z q3
+. q4
+a q3
+i q3
+. q4
+c q5
+s q3
+. q4
+s q3
+t q3
+a q3
+n q3
+f q3
+o q3
+r q3
+d q3
+. q4
+c q5
+o q6
+m q7
+STRING ACCEPTED
+Do you want to enter a string: y
+Enter a string: foo@goo.com..com
+f q1
+o q1
+o q1
+@ q2
+g q3
+o q3
+o q3
+. q4
+c q5
+o q6
+m q7
+. q4
+. q8 TRAP STATE
+c q5
+o q6
+m q7
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: abqe.@boom.com
+a q1
+b q1
+q q1
+e q1
+. q0
+@ q8 TRAP STATE
+b q1
+o q1
+o q1
+m q1
+. q0
+c q1
+o q1
+m q1
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: comp@comp.com.
+c q1
+o q1
+m q1
+p q1
+@ q2
+c q3
+o q3
+m q3
+p q3
+. q4
+c q5
+o q6
+m q7
+. q4
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: redblue@green..com
+r q1
+e q1
+d q1
+b q1
+l q1
+u q1
+e q1
+@ q2
+g q3
+r q3
+e q3
+e q3
+n q3
+. q4
+. q8 TRAP STATE
+c q5
+o q6
+m q7
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: random@com
+r q1
+a q1
+n q1
+d q1
+o q1
+m q1
+@ q2
+c q3
+o q3
+m q3
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: poke@a.com.com
+p q1
+o q1
+k q1
+e q1
+@ q2
+a q3
+. q4
+c q5
+o q6
+m q7
+. q4
+c q5
+o q6
+m q7
+STRING ACCEPTED
+Do you want to enter a string: y
+Enter a string: www@com.comp
+w q1
+w q1
+w q1
+@ q2
+c q3
+o q3
+m q3
+. q4
+c q5
+o q6
+m q7
+p q3
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: wwwb@com.co
+w q1
+w q1
+w q1
+b q1
+@ q2
+c q3
+o q3
+m q3
+. q4
+c q5
+o q6
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: .two@three.com
+. q8 TRAP STATE
+t q1
+w q1
+o q1
+@ q2
+t q3
+h q3
+r q3
+e q3
+e q3
+. q4
+c q5
+o q6
+m q7
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: food@for.com@
+f q1
+o q1
+o q1
+d q1
+@ q2
+f q3
+o q3
+r q3
+. q4
+c q5
+o q6
+m q7
+@ q8 TRAP STATE
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: comp@company.co.com
+c q1
+o q1
+m q1
+p q1
+@ q2
+c q3
+o q3
+m q3
+p q3
+a q3
+n q3
+y q3
+. q4
+c q5
+o q6
+. q4
+c q5
+o q6
+m q7
+STRING ACCEPTED
+Do you want to enter a string: y
+Enter a string: computer@company.com.co
+c q1
+o q1
+m q1
+p q1
+u q1
+t q1
+e q1
+r q1
+@ q2
+c q3
+o q3
+m q3
+p q3
+a q3
+n q3
+y q3
+. q4
+c q5
+o q6
+m q7
+. q4
+c q5
+o q6
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: @abcde.com
+@ q8 TRAP STATE
+a q1
+b q1
+c q1
+d q1
+e q1
+. q0
+c q1
+o q1
+m q1
+STRING REJECTED
+Do you want to enter a string: y
+Enter a string: people.dog.cat@.com
+p q1
+e q1
+o q1
+p q1
+l q1
+e q1
+. q0
+d q1
+o q1
+g q1
+. q0
+c q1
+a q1
+t q1
+@ q2
+. q8 TRAP STATE
+c q3
+o q3
+m q3
+STRING REJECTED
+Do you want to enter a string: cable..cord@fort.com
+Invalid input! Try again
+Do you want to enter a string: y
+Enter a string: cable..cord@fort.com
+c q1
+a q1
+b q1
+l q1
+e q1
+. q0
+. q8 TRAP STATE
+c q1
+o q1
+r q1
+d q1
+@ q2
+f q3
+o q3
+r q3
+t q3
+. q4
+c q5
+o q6
+m q7
+STRING REJECTED
+Do you want to enter a string: n
+>>> 
